@@ -1,0 +1,233 @@
+{
+    "acevpn":
+    {
+        "Amsterdam":["acevpn-ultimate-udp-faster-1194-Netherlands.conf"],
+        "Frankfurt":["acevpn-ultimate-udp-faster-1194-Germany.conf"],
+        "London":["acevpn-ultimate-udp-faster-1194-UK.conf"],
+        "Los Angeles":["acevpn-ultimate-udp-faster-1194-USA.conf"],
+        "New Jersey":["acevpn-ultimate-udp-faster-1194-USA.conf"],
+        "Paris":["acevpn-ultimate-udp-faster-1194-France.conf"],
+        "Tokyo":["acevpn-ultimate-udp-faster-1194-Japan.conf"],
+        "Sydney":["acevpn-ultimate-udp-faster-1194-Australia.conf"]
+    },
+    "blackvpn":
+    {
+        "Amsterdam":["Privacy-Netherlands.conf"],
+        "Frankfurt":["Privacy-Netherlands.conf", "Privacy-Luxembourg.conf", "Privacy-Switzerland.conf"],
+        "Paris":["Privacy-Luxembourg.conf", "Privacy-Netherlands.conf"],
+        "Tokyo":["Privacy-Japan.conf"],
+        "New Jersey":["TV-USA-East.conf"],
+        "Los Angeles":["TV-USA-West.conf"],
+        "London":["TV-UK.conf"],
+        "Sydney":["Privacy-Australia.conf"]
+    },
+    "bufferedvpn":
+    {
+        "Amsterdam":["NL_Netherlands.ovpn"],
+        "Frankfurt":["DE_Germany.ovpn"],
+        "London":["GB_Great_Britain.ovpn"],
+        "Los Angeles":["US_US_East_Coast.ovpn"],
+        "New Jersey":["US_US_West_Coast.ovpn"],
+        "Paris":["FR_France.ovpn"],
+        "Tokyo":["JP_Japan.ovpn"],
+        "Sydney":["AU_Australia.ovpn"]
+    },
+    "cyberghost":
+    {
+        "Amsterdam":["Netherlands.ovpn"],
+        "Frankfurt":["Germany.ovpn"],
+        "London":["UnitedKingdom.ovpn"],
+        "Los Angeles":["USA-LosAngeles.ovpn"],
+        "New Jersey":["USA-NewYork.ovpn"],
+        "Paris":["France.ovpn"],
+        "Tokyo":["Japan.ovpn"],
+        "Sydney":["Australia.ovpn"]
+    },
+    "expressvpn":
+    {
+        "Amsterdam":["netherlands_-_amsterdam_udp.ovpn", "netherlands_-_amsterdam_-_2_udp.ovpn"],
+        "Frankfurt":["germany_-_frankfurt_-_1_udp.ovpn", "germany_-_frankfurt_-_2_udp.ovpn"],
+        "London":["uk_-_london_udp.ovpn"],
+        "Los Angeles":["usa_-_los_angeles_-_1_udp.ovpn", "usa_-_los_angeles_-_2_udp.ovpn", "usa_-_los_angeles_-_3_udp.ovpn"],
+        "New Jersey":["usa_-_new_jersey_-_1_udp.ovpn", "usa_-_new_jersey_-_3_udp.ovpn", "usa_-_new_york_udp.ovpn"],
+        "Paris":["france_-_paris_-_1_udp.ovpn", "france_-_paris_-_2_udp.ovpn"],
+        "Tokyo":["japan_-_tokyo_-_1_udp.ovpn", "japan_-_tokyo_-_2_udp.ovpn"],
+        "Sydney":["australia_-_sydney_udp.ovpn", "australia_-_sydney_-_2_udp.ovpn"]
+    },
+    "frootvpn":
+    {
+        "Amsterdam":["nl.openvpn.frootvpn.ovpn"],
+        "Frankfurt":["de.openvpn.frootvpn.ovpn"],
+        "London":["uk.openvpn.frootvpn.ovpn"],
+        "Los Angeles":["us.openvpn.frootvpn.ovpn"],
+        "New Jersey":["us.openvpn.frootvpn.ovpn"],
+        "Paris":["fr.openvpn.frootvpn.ovpn"],
+        "Tokyo":["jp.openvpn.frootvpn.ovpn"],
+        "Sydney":["au.openvpn.frootvpn.ovpn"]
+    },
+    "hidemyass":
+    {
+        "Amsterdam":["Netherlands.Amsterdam.ovpn"],
+        "Frankfurt":["Germany.Hesse.Frankfurt.ovpn"],
+        "London":["UK.London.ovpn"],
+        "Los Angeles":["USA.California.LosAngeles.ovpn"],
+        "New Jersey":["USA.NewJersey.ovpn"],
+        "Paris":["France.Paris.ovpn"],
+        "Tokyo":["Japan.Tokyo.ovpn"],
+        "Sydney":["Australia.NewSouthWales.Sydney.ovpn"]
+    },
+    "ipvanish":
+    {
+        "Amsterdam":["ipvanish-NL-Amsterdam-ams-a02.ovpn"],
+        "Frankfurt":["ipvanish-DE-Frankfurt-fra-a01.ovpn"],
+        "London":["ipvanish-UK-London-lon-a01.ovpn"],
+        "Los Angeles":["ipvanish-US-Los-Angeles-lax-a01.ovpn"],
+        "New Jersey":["ipvanish-US-New-York-nyc-a01.ovpn"],
+        "Paris":["ipvanish-FR-Paris-par-a01.ovpn"],
+        "Tokyo":["ipvanish-JP-Tokyo-nrt-a01.ovpn"],
+        "Sydney":["ipvanish-AU-Sydney-syd-a01.ovpn"]
+    },
+    "privateinternetaccess":
+    {
+        "Amsterdam":["Netherlands.ovpn"],
+        "Frankfurt":["Germany.ovpn"],
+        "London":["UK-London.ovpn"],
+        "Los Angeles":["US-West.ovpn", "US-California.ovpn"],
+        "New Jersey":["US-New-York-City.ovpn"],
+        "Paris":["France.ovpn"],
+        "Tokyo":["Japan.ovpn"],
+        "Sydney":["AU-Sydney.ovpn"]
+    },
+    "privatoria":
+    {
+        "Amsterdam":["Amsterdam.ovpn"],
+        "Frankfurt":["Berlin.ovpn"],
+        "London":["London.ovpn"],
+        "Los Angeles":["SanFancisco.ovpn"],
+        "New Jersey":["NewYork.ovpn"],
+        "Paris":["Paris.ovpn"],
+        "Tokyo":["HongKong.ovpn"],
+        "Sydney":["Sydney.ovpn"]
+    },
+    "purevpn":
+    {
+        "Amsterdam":["NETHERLANDS-UDP.ovpn"],
+        "Frankfurt":["GERMANY-UDP.ovpn"],
+        "London":["UK-LONDON1-UDP.ovpn"],
+        "Los Angeles":["USA-LOSANGELES-UDP.ovpn"],
+        "New Jersey":["USA-NEWYORK-UDP.ovpn"],
+        "Paris":["FRANCE(V)-UDP.ovpn"],
+        "Tokyo":["JAPAN-UDP.ovpn"],
+        "Sydney":["AUSTRALIA-UDP.ovpn"]
+    },
+    "ra4wvpn":  
+    {
+        "Amsterdam":["ra4wvpn-nl-amsterdam.ovpn"],
+        "Frankfurt":["ra4wvpn-de-frankfurt.ovpn"],
+        "London":["ra4wvpn-uk-hampshire.ovpn"],
+        "Los Angeles":["ra4wvpn-us-washingtondc.ovpn"],
+        "New Jersey":["ra4wvpn-us-atlanta.ovpn"],
+        "Paris":["ra4wvpn-fr-roubaix.ovpn"],
+        "Tokyo":["ra4wvpn-jp-tokyo.ovpn"],
+        "Sydney":["ra4wvpn-hk-hongkong.ovpn"]
+    },
+    "slickvpn":
+    {
+        "Amsterdam":["Netherlands-Amsterdam.ovpn"],
+        "Frankfurt":["Germany-Frankfurt.ovpn"],
+        "London":["UK-London.ovpn"],
+        "Los Angeles":["USA-LosAngeles.ovpn"],
+        "New Jersey":["USA-NewYork.ovpn"],
+        "Paris":["France-Lille.ovpn"],
+        "Tokyo":["Japan-Tokyo.ovpn"],
+        "Sydney":["Australia-Sydney.ovpn"]
+    },
+    "tunnelbear":
+    {
+        "Amsterdam":["TunnelBear Netherlands.ovpn"],
+        "Frankfurt":["TunnelBear Germany.ovpn"],
+        "London":["TunnelBear United Kingdom.ovpn"],
+        "Los Angeles":["TunnelBear United States.ovpn"],
+        "New Jersey":["TunnelBear United States.ovpn"],
+        "Paris":["TunnelBear France.ovpn"],
+        "Tokyo":["TunnelBear Japan.ovpn"],
+        "Sydney":["TunnelBear Australia.ovpn"]
+    },
+    "vikingvpn":
+    {
+        "Amsterdam":["Amsterdam.ovpn"],
+        "Frankfurt":["Amsterdam.ovpn"],
+        "London":["Amsterdam.ovpn"],
+        "Los Angeles":["LA.ovpn"],
+        "New Jersey":["NYC.ovpn"],
+        "Paris":["Amsterdam.ovpn"],
+        "Tokyo":["LA.ovpn", "Seattle.ovpn"],
+        "Sydney":["LA.ovpn", "Seattle.ovpn"]
+    },
+    "vpnghost":
+    {
+        "Amsterdam":["RogueVPN-NL-Amsterdam.ovpn"],
+        "Frankfurt":["RogueVPN-DE-Frankfurt.ovpn"],
+        "London":["RogueVPN-UK-London.ovpn"],
+        "Los Angeles":["RogueVPN-USA-LosAngeles.ovpn"],
+        "New Jersey":["RogueVPN-USA-Newyork.ovpn"],
+        "Paris":["RogueVPN-FR-Paris.ovpn"],
+        "Tokyo":["RogueVPN-JP-Tokyo.ovpn"],
+        "Sydney":["RogueVPN-AU-Sydney.ovpn"]
+    },
+    "vpnsh":
+    {
+        "Amsterdam":["Netherlands.ovpn"],
+        "Frankfurt":["Germany.ovpn"],
+        "London":["UnitedKingdom.ovpn"],
+        "Los Angeles":["UnitedStatesWestCoast.ovpn"],
+        "New Jersey":["UnitedStatesEastCoast.ovpn"],
+        "Paris":["France.ovpn"],
+        "Tokyo":["Japan.ovpn"],
+        "Sydney":["Australia.ovpn"]
+    },
+    "vpnbook":
+    {
+        "Amsterdam":["vpnbook-euro1-udp53.ovpn"],
+        "Frankfurt":["vpnbook-de233-udp53.ovpn"],
+        "London":["vpnbook-de233-udp53.ovpn"],
+        "Los Angeles":["vpnbook-us1-udp53.ovpn"],
+        "New Jersey":["vpnbook-us1-udp53.ovpn"],
+        "Paris":["vpnbook-euro2-udp53.ovpn"],
+        "Tokyo":["vpnbook-us1-udp53.ovpn"],
+        "Sydney":["vpnbook-us1-udp53.ovpn"]
+    },
+    "vpnunlimited":
+    {
+        "Amsterdam":["nl_5600B.ovpn"],
+        "Frankfurt":["de_5600B.ovpn"],
+        "London":["uk_5600B.ovpn"],
+        "Los Angeles":["us-la_5600B.ovpn"],
+        "New Jersey":["us-mia_5600B.ovpn"],
+        "Paris":["fr_5600B.ovpn"],
+        "Tokyo":["jp_5600B.ovpn"],
+        "Sydney":["au-syd_5600B.ovpn"]
+    },
+    "vyprvpn":
+    {
+        "Amsterdam":["Netherlands - Amsterdam.ovpn"],
+        "Frankfurt":["Germany - Frankfurt.ovpn"],
+        "London":["United Kingdom - London.ovpn"],
+        "Los Angeles":["US - Los Angeles.ovpn"],
+        "New Jersey":["US - New York City.ovpn"],
+        "Paris":["France - Paris.ovpn"],
+        "Tokyo":["Japan - Tokyo.ovpn"],
+        "Sydney":["Australia - Sydney.ovpn"]
+    },
+    "worldvpn":
+    {
+        "Amsterdam":["netherlands.ovpn"],
+        "Frankfurt":["germany.ovpn"],
+        "London":["unitedkingdom.ovpn"],
+        "Los Angeles":["usa-california.ovpn"],
+        "New Jersey":["usa-newyork.ovpn"],
+        "Paris":["france.ovpn"],
+        "Tokyo":["japan.ovpn"],
+        "Sydney":["australia.ovpn"]
+    }
+}
