@@ -566,26 +566,9 @@ def testVPN(vpn_provider, test_location, test_id,
             speedtest_metadata["https-download-speed-Mbps"] = float("{0:.2f}".format(https_speed))
             speedtest_metadata["https-download-status"] = "OK"
     except subprocess.CalledProcessError as e:
-        if e.returncode == 56 or e.returncode == 110 or e.returncode == 104:
-            #strange curl errors since 16-November-2016
             speedtest_metadata["test-result"] = "Curl FAILURE"
             disconnectVPN()
             return speedtest_metadata
-        else:
-            print "Curl error: " +str(e)
-            speedtest_metadata["https-download-speed-Mbps"] = 0
-            speedtest_metadata["https-download-status"] = "FAILED"
-        
-    except subprocess.CalledProcessError as e:
-        if e.returncode == 7:
-            speedtest_metadata["p2p-download-status"] = 'TIMEOUT'
-            speedtest_metadata["p2p-download-speed-Mbps"] = '0'
-            print "Download timed out after " + TORRENT_TIMEOUT + " seconds"
-        else:
-            speedtest_metadata["p2p-download-status"] = 'FAILED'
-            speedtest_metadata["p2p-download-speed-Mbps"] = '0'
-            print "Download error: "+str(e)
-    
     
     #test speed with bittorrent
     try:
