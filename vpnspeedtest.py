@@ -566,7 +566,7 @@ def testVPN(vpn_provider, test_location, test_id,
             speedtest_metadata["https-download-speed-Mbps"] = float("{0:.2f}".format(https_speed))
             speedtest_metadata["https-download-status"] = "OK"
     except subprocess.CalledProcessError as e:
-        if e.returncode == 56:
+        if e.returncode == 56 or e.returncode == 110 or e.returncode == 104:
             #strange curl errors since 16-November-2016
             speedtest_metadata["test-result"] = "Curl FAILURE"
             disconnectVPN()
