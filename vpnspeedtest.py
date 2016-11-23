@@ -542,34 +542,7 @@ def testVPN(vpn_provider, test_location, test_id,
         dns_average_time = dns_lookup_total / len(dns_lookup_results)
         speedtest_metadata["dns-lookup-time"] = dns_average_time
         print "Average DNS lookup was: " + str(dns_average_time)
-    
-    #test speed with https
-    try:
-        print "Testing download speed with HTTPS..."
-        download_cmd = ['curl', '--interface', 'tun0', '--dns-interface', 'tun0', '-w','%{speed_download}\t%{time_namelookup}\t%{time_total}\n', '-o', '/dev/null', https_download_url]
-        
-        if (log_to_terminal is False):
-            ps = subprocess.Popen(download_cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-            https_speedtest_output = ps.communicate()[0]
-            print https_speedtest_output            
-            tmp = https_speedtest_output.split('\n')
-            speedtest_info = tmp[-2]    #curl adds one blank line at the end so take the 2nd last line
-            speed,dnstime,tottime = speedtest_info.split()
-        else:
-            https_speedtest_output = subprocess.check_output(download_cmd)
-            #print "https_speedtest_output:", https_speedtest_output
-            speed,dnstime,tottime = https_speedtest_output.split()
-        if speed:
-            #speed is in Bytes per second. Convert Mega bits per second
-            https_speed = ((float(speed) / 1024) / 1024) * 8
-            print "HTTPS Download speed in Mbps: " + str(https_speed)
-            speedtest_metadata["https-download-speed-Mbps"] = float("{0:.2f}".format(https_speed))
-            speedtest_metadata["https-download-status"] = "OK"
-    except subprocess.CalledProcessError as e:
-            speedtest_metadata["test-result"] = "Curl FAILURE"
-            disconnectVPN()
-            return speedtest_metadata
-    
+
     #test speed with bittorrent
     try:
         print "Testing download speed with bittorrent..."
@@ -635,6 +608,43 @@ def testVPN(vpn_provider, test_location, test_id,
         speedtest_metadata["p2p-download-status"] = 'FAILED'
         speedtest_metadata["p2p-download-speed-Mbps"] = '0'
         print "Could not translate bittorrent speed to a float: " + str(e)
+    
+    
+    #test speed with https
+    try:
+        print "Testing download speed with HTTPS..."
+        download_cmd = ['curl', '--interface', 'tun0', '--dns-interface', 'tun0', '-w','%{speed_download}\t%{time_namelookup}\t%{time_total}\n', '-o', '/dev/null', https_download_url]
+        
+        if (log_to_terminal is False):
+            ps = subprocess.Popen(download_cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            https_speedtest_output = ps.communicate()[0]
+            print https_speedtest_output
+            
+            #handle Vultr network / curl error (exception not thrown)
+            if 'curl: (56) SSL read: error' in https_speedtest_output:
+                speedtest_metadata["test-result"] = "Curl FAILURE"
+                disconnectVPN()
+                return speedtest_metadata
+            
+            tmp = https_speedtest_output.split('\n')
+            speedtest_info = tmp[-2]    #curl adds one blank line at the end so take the 2nd last line
+            speed,dnstime,tottime = speedtest_info.split()
+        else:
+            https_speedtest_output = subprocess.check_output(download_cmd)
+            #print "https_speedtest_output:", https_speedtest_output
+            speed,dnstime,tottime = https_speedtest_output.split()
+        if speed:
+            #speed is in Bytes per second. Convert Mega bits per second
+            https_speed = ((float(speed) / 1024) / 1024) * 8
+            print "HTTPS Download speed in Mbps: " + str(https_speed)
+            speedtest_metadata["https-download-speed-Mbps"] = float("{0:.2f}".format(https_speed))
+            speedtest_metadata["https-download-status"] = "OK"
+    except subprocess.CalledProcessError as e:
+            speedtest_metadata["test-result"] = "Curl FAILURE"
+            disconnectVPN()
+            return speedtest_metadata
+    
+    
 
     
     #add tun0 data to the end 
