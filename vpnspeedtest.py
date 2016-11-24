@@ -509,15 +509,6 @@ def testVPN(vpn_provider, test_location, test_id,
     speedtest_metadata["vpn-connection-time"] = connect_time_delta.total_seconds()
     print "Connected to VPN in " + str(connect_time_delta.total_seconds()) + " seconds"
 
-    #test vpn connection is active
-    try:
-        print "Looking up public IPv4 address..."
-        publicip = subprocess.check_output(["curl", "--interface", "tun0", "-s","ipinfo.io/ip"])
-        print "Public IPv4 address is: " + publicip
-    except subprocess.CalledProcessError as e:
-        print("Curl error:"+str(e))
-    else:
-        speedtest_metadata["vpn-public-IP"] = publicip.rstrip()
     
     #test DNS lookup speeds
     dns_lookup_results = []
@@ -621,8 +612,8 @@ def testVPN(vpn_provider, test_location, test_id,
             print https_speedtest_output
             
             #handle Vultr network / curl error (exception not thrown)
-            if 'curl: (56) SSL read: error' in https_speedtest_output:
-                speedtest_metadata["test-result"] = "Curl FAILURE"
+            if 'curl: (56) SSL read: error' in https_speedtest_output or 'Timeout while contacting DNS servers' in https_speedtest_output:
+                speedtest_metadata["test-result"] = "NETWORK_ERROR"
                 disconnectVPN()
                 return speedtest_metadata
             
@@ -640,20 +631,37 @@ def testVPN(vpn_provider, test_location, test_id,
             speedtest_metadata["https-download-speed-Mbps"] = float("{0:.2f}".format(https_speed))
             speedtest_metadata["https-download-status"] = "OK"
     except subprocess.CalledProcessError as e:
-            speedtest_metadata["test-result"] = "Curl FAILURE"
+            speedtest_metadata["test-result"] = "NETWORK_ERROR"
             disconnectVPN()
             return speedtest_metadata
     
-    
-
+    #test vpn connection is active
+    try:
+        print "Looking up public IPv4 address..."
+        publicip = subprocess.check_output(["curl", "--interface", "tun0", "-s","ipinfo.io/ip"])
+        print "Public IPv4 address is: " + publicip
+    except subprocess.CalledProcessError as e:
+        speedtest_metadata["test-result"] = "NETWORK_ERROR"
+        disconnectVPN()
+        return speedtest_metadata
+    else:
+        speedtest_metadata["vpn-public-IP"] = publicip.strip()
     
     #add tun0 data to the end 
     try:
         ifconfig_req = ['ifconfig', 'tun0']
         ifconfig_output = subprocess.check_output(ifconfig_req)
+        
+        if 'RX bytes:0 (0.0 B)'in ifconfig_output:
+            speedtest_metadata["test-result"] = "NETWORK_ERROR"
+            disconnectVPN()
+            return speedtest_metadata
+        
         print ifconfig_output
     except subprocess.CalledProcessError as e:
-        print "ifconfig error:", str(e)
+        speedtest_metadata["test-result"] = "NETWORK_ERROR"
+        disconnectVPN()
+        return speedtest_metadata
 
 
     disconnectVPN()
