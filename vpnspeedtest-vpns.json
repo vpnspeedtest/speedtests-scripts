@@ -122,14 +122,14 @@
     },
     "ra4wvpn":  
     {
-        "Amsterdam":["ra4wvpn-nl-amsterdam.ovpn"],
+        "Amsterdam":["ra4wvpn-nl-amsterdam.ovpn", "ra4wvpn-nl-dronten.ovpn"],
         "Frankfurt":["ra4wvpn-de-frankfurt.ovpn"],
         "London":["ra4wvpn-uk-hampshire.ovpn"],
         "Los Angeles":["ra4wvpn-us-washingtondc.ovpn"],
         "New Jersey":["ra4wvpn-us-atlanta.ovpn"],
         "Paris":["ra4wvpn-fr-roubaix.ovpn"],
         "Tokyo":["ra4wvpn-jp-tokyo.ovpn"],
-        "Sydney":["ra4wvpn-hk-hongkong.ovpn"]
+        "Sydney":["ra4wvpn-au-sydney.ovpn"]
     },
     "slickvpn":
     {
@@ -141,6 +141,17 @@
         "Paris":["France-Lille.ovpn"],
         "Tokyo":["Japan-Tokyo.ovpn"],
         "Sydney":["Australia-Sydney.ovpn"]
+    },
+    "torguard":
+    {
+        "Amsterdam":["TorGuard.Netherlands.ovpn"],
+        "Frankfurt":["TorGuard.Germany.Frankfurt.ovpn"],
+        "London":["TorGuard.UK.London.ovpn"],
+        "Los Angeles":["TorGuard.USA-LA.ovpn"],
+        "New Jersey":["TorGuard.USA-NEW-JERSEY.ovpn", "TorGuard.USA-NEW-YORK.ovpn"],
+        "Paris":["TorGuard.France.ovpn"],
+        "Tokyo":["TorGuard.Japan.ovpn"],
+        "Sydney":["TorGuard.Australia.Sydney.ovpn"]
     },
     "tunnelbear":
     {
