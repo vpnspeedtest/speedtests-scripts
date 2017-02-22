@@ -3,7 +3,7 @@ import subprocess, netifaces, telnetlib, re, string, sys, select,getopt, signal,
 from time import sleep
 
 DEFAULT_HTTPS_URL = "https://dl.google.com/dl/android/studio/ide-zips/2.2.2.0/android-studio-ide-145.3360264-linux.zip"
-DEFAULT_TORRENT_URL = "http://releases.ubuntu.com/16.04.1/ubuntu-16.04.1-desktop-amd64.iso.torrent"
+DEFAULT_TORRENT_URL = "http://releases.ubuntu.com/16.10/ubuntu-16.10-desktop-amd64.iso.torrent"
 TORRENT_TIMEOUT = "60"  #seconds of inactivity
 OPENVPN_MGMT_PORT = "5555"
 VPN_CONNECT_TIMEOUT = 199    #seconds
