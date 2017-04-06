@@ -13,8 +13,8 @@
     "blackvpn":
     {
         "Amsterdam":["Privacy-Netherlands.conf"],
-        "Frankfurt":["Privacy-Netherlands.conf", "Privacy-Luxembourg.conf", "Privacy-Switzerland.conf"],
-        "Paris":["Privacy-Luxembourg.conf", "Privacy-Netherlands.conf"],
+        "Frankfurt":["Privacy-Germany.conf"],
+        "Paris":["Privacy-France.conf"],
         "Tokyo":["Privacy-Japan.conf"],
         "New Jersey":["TV-USA-East.conf"],
         "Los Angeles":["TV-USA-West.conf"],
